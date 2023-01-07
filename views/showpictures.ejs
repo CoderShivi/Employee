@@ -1,0 +1,42 @@
+<style>
+    .maincontainer
+    {
+  background:#E6E6FA;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    }
+
+    .box
+{ 
+    height: auto;
+  width: auto;
+  background-color:#D8BFD8;
+  border-radius: 30%;
+  padding: 20px;
+}
+</style>
+
+
+
+
+
+<html>
+    <div class="maincontainer">
+        <div class="box">
+    <center>
+        <form action="/employee/editpicture" method="post" enctype="multipart/form-data">
+            <input type="hidden" value="<%=data.employeeid%>" name="employeeid">
+            <h3><%=data.firstname%> <%=data.lastname%></h3>
+        
+        <img src="/images/<%=data.picture%>" width="150"><br><br>
+        <b>Upload New Image</b><br><br>
+        <input type="file" required name="picture"><br> <br>       
+        <input type="submit" value="Upload ">
+     </form>
+    </center>
+</div>
+</div>
+</html>
